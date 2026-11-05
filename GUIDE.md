@@ -24,6 +24,12 @@
 
 需要 Node.js 18 以上（`node --version` 能打印版本就行）。零依赖，不用 `npm install`。
 
+已经装了 DSH 的话，一行就能装好（之后把 <插件目录> 换成本机路径即可）：
+
+```powershell
+dsh plugin --profile desktop add https://github.com/xizhilang2012/dsh-claim-gate
+```
+
 把下面命令里的 `<插件目录>` 换成你放这个文件夹的位置，然后复制粘贴。
 
 ### 第一步：检查一句没有出处的话
