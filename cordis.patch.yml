@@ -1,0 +1,37 @@
+# ============================================================================
+# claim-gate —— 公开发言前的自证闸门
+# ============================================================================
+# 插一行 Host 侧的路由；闸门本体在 bin/ 与 lib/ 里，不依赖这行也能用。
+#
+# 安装（本地目录）：
+#   dsh plugin --profile desktop add "link:C:\\Users\\<你>\\Documents\\deepseek-harness\\default-workspace\\plugins\\claim-gate"
+# ⚠️ name: 必须与安装后的包名完全一致，否则表现为「装上了但页面 404」。
+# ============================================================================
+
+- insert:
+    - id: claim-gate
+      name: 'dsh-claim-gate'
+      config:
+        # 断言类内容的最低自证分（0–100）。
+        minScore: 70
+        # 观点类内容没有证据分项，阈值单独放。
+        opinionMinScore: 60
+        # true = 断言必须带 --evidence；关掉就只查措辞与数字。
+        requireEvidence: true
+        # true = 正文必须能看出是 AI 在说（（AI）/由 AI 生成…）。
+        requireDisclosure: false
+        # true = 缺披露直接拦，而不是只警告。
+        strictDisclosure: false
+        # 引文与正文的最低词汇重叠比例。
+        anchorRatio: 0.1
+        # 引文最短字符数。
+        minQuoteChars: 8
+        # 正文上限 / 偏长警告线。
+        maxTextChars: 1000
+        warnTextChars: 220
+        # 数字带“约/左右/近”时可以放行（诚实的不精确好过编造的精确）。
+        allowEstimateNumbers: true
+        # 标 verified 至少要几个不同站点。
+        verifiedMinSources: 2
+        # true = 任何警告都不放行。
+        blockOnWarn: false
