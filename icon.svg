@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="128" height="128" rx="28" fill="#4D6BFE"/>
+  <!-- 一道门：左边是话，右边是勾 -->
+  <rect x="26" y="30" width="8" height="68" rx="4" fill="#FFFFFF" opacity="0.55"/>
+  <path d="M52 64 l12 13 22 -26" fill="none" stroke="#FFFFFF" stroke-width="10"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="92" cy="40" r="7" fill="#FFFFFF" opacity="0.85"/>
+</svg>
