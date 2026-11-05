@@ -182,7 +182,14 @@ if (verdict.verdict !== 'pass') {
 ## 安装
 
 ```powershell
-dsh plugin --profile desktop add "link:C:\Users\<你>\Documents\deepseek-harness\default-workspace\plugins\claim-gate"
+# 从 GitHub 安装（推荐）
+dsh plugin --profile desktop add https://github.com/xizhilang2012/dsh-claim-gate
+
+# 或者装某个 Release 的打包文件
+dsh plugin --profile desktop add https://github.com/xizhilang2012/dsh-claim-gate/releases/download/v0.1.0/dsh-claim-gate-0.1.0.tgz
+
+# 本地开发：链接工作目录，改代码重载即生效
+dsh plugin --profile desktop add "link:<插件目录>"
 ```
 
 装完后：
