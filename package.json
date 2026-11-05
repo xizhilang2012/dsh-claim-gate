@@ -1,0 +1,56 @@
+{
+  "name": "dsh-claim-gate",
+  "version": "0.1.0",
+  "description": "发出去之前，先自证：断言要出处，数字要落地，语气要配得上证据。",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "claim-gate": "./bin/claim-gate.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./lib/gate": "./lib/gate.mjs",
+    "./lib/coach": "./lib/coach.mjs",
+    "./lib/ledger": "./lib/ledger.mjs",
+    "./lib/policy": "./lib/policy.mjs",
+    "./lib/text": "./lib/text.mjs"
+  },
+  "files": [
+    "index.js",
+    "bin",
+    "lib",
+    "cordis.patch.yml",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "GUIDE.md",
+    "MARKET.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "fact-check",
+    "evidence",
+    "agent",
+    "自证"
+  ],
+  "author": "xizhilang_2012",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xizhilang2012/dsh-claim-gate.git"
+  },
+  "homepage": "https://github.com/xizhilang2012/dsh-claim-gate#readme",
+  "bugs": {
+    "url": "https://github.com/xizhilang2012/dsh-claim-gate/issues"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
